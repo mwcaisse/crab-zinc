@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrabZinc.Web", "CrabZinc.Web\CrabZinc.Web.csproj", "{E562663C-0B71-4D0E-8B73-16E22629B9BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrabZinc.Data", "CrabZinc.Data\CrabZinc.Data.csproj", "{47A21C22-2493-465C-8715-347118334478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrabZinc.Common", "CrabZinc.Common\CrabZinc.Common.csproj", "{4B77C0BB-763B-4548-BD79-19F5CB542873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrabZinc.Logic", "CrabZinc.Logic\CrabZinc.Logic.csproj", "{40EB171B-626E-44FA-B7E7-4F6E76868DB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrabZinc.Authentication", "CrabZinc.Authentication\CrabZinc.Authentication.csproj", "{68697D73-D883-43BF-92A9-5EC8F92FE2AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E562663C-0B71-4D0E-8B73-16E22629B9BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E562663C-0B71-4D0E-8B73-16E22629B9BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E562663C-0B71-4D0E-8B73-16E22629B9BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E562663C-0B71-4D0E-8B73-16E22629B9BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A21C22-2493-465C-8715-347118334478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A21C22-2493-465C-8715-347118334478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A21C22-2493-465C-8715-347118334478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A21C22-2493-465C-8715-347118334478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B77C0BB-763B-4548-BD79-19F5CB542873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B77C0BB-763B-4548-BD79-19F5CB542873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B77C0BB-763B-4548-BD79-19F5CB542873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B77C0BB-763B-4548-BD79-19F5CB542873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCDE221C-0416-4A8F-8A86-CC2423C1B1A6}
+	EndGlobalSection
+EndGlobal
