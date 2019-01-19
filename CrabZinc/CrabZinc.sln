@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrabZinc.Common", "CrabZinc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrabZinc.Logic", "CrabZinc.Logic\CrabZinc.Logic.csproj", "{40EB171B-626E-44FA-B7E7-4F6E76868DB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrabZinc.Authentication", "CrabZinc.Authentication\CrabZinc.Authentication.csproj", "{68697D73-D883-43BF-92A9-5EC8F92FE2AD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40EB171B-626E-44FA-B7E7-4F6E76868DB0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68697D73-D883-43BF-92A9-5EC8F92FE2AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,15 +5,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="web-src\components\" />
+    <Folder Include="web-src\views\" />
+    <Folder Include="web-src\services\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Markdig" Version="0.15.7" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrabZinc.Common\CrabZinc.Common.csproj" />
+    <ProjectReference Include="..\CrabZinc.Data\CrabZinc.Data.csproj" />
+    <ProjectReference Include="..\CrabZinc.Logic\CrabZinc.Logic.csproj" />
   </ItemGroup>
 
 </Project>

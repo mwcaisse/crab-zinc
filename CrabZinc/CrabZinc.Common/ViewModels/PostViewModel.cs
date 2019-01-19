@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using OwlTin.Common.Entities;
 
-namespace CrabZinc.Common.Entities
+namespace CrabZinc.Common.ViewModels
 {
-    public class Post : ITrackedEntity, IActiveEntity
+    public class PostViewModel
     {
+
         public long PostId { get; set; }
 
         public Guid PostUuid { get; set; }
@@ -26,5 +26,6 @@ namespace CrabZinc.Common.Entities
         public DateTime CreateDate { get; set; }
 
         public DateTime ModifiedDate { get; set; }
+
     }
 }

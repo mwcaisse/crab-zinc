@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CrabZinc.Common\CrabZinc.Common.csproj" />
+    <ProjectReference Include="..\CrabZinc.Data\CrabZinc.Data.csproj" />
+  </ItemGroup>
+
 </Project>
