@@ -35,10 +35,11 @@ namespace CrabZinc.Logic.Services
         {
             var post = new Post()
             {
-                PostUuid = new Guid(),
+                PostUuid = Guid.NewGuid(),
                 Slug = ConvertTitleToSlug(toCreate.Title),
                 Title = toCreate.Title,
-                Content = toCreate.Content
+                Content = toCreate.Content,
+                Active = true
             };
 
             _db.Posts.Add(post);

@@ -7,6 +7,7 @@ using CrabZinc.Common.Entities;
 using CrabZinc.Common.ViewModels;
 using CrabZinc.Data;
 using CrabZinc.Logic.Services;
+using CrabZinc.Web.Configuration;
 using CrabZinc.Web.Converters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,6 +44,12 @@ namespace CrabZinc.Web
                 options.UseMySql(Configuration.GetSection("connectionString").Value)
             );
 
+            var applicationConfig = new ApplicationConfiguration()
+            {
+                RootPathPrefix = ""
+            };
+            services.AddSingleton(applicationConfig);
+
             services.AddTransient<PostService>();
 
             var entityMapperConfig = new MapperConfiguration(config =>
@@ -66,6 +73,8 @@ namespace CrabZinc.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseStaticFiles();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

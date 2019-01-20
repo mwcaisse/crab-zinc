@@ -4,6 +4,7 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require('gulp');
+var merge = require("merge-stream");
 
 var libs = "./wwwroot/lib/";
 
@@ -49,11 +50,29 @@ gulp.task('restore:q', function () {
     ]).pipe(gulp.dest(libs + 'q/js'));
 });
 
+gulp.task('restore:requirejs', function () {
+    return gulp.src([
+        'node_modules/requirejs/require.js'
+    ]).pipe(gulp.dest(libs + 'require/js'));
+});
+
 gulp.task('restore:vue', function () {
     return gulp.src([
         'node_modules/vue/dist/vue.js',
         'node_modules/vue/dist/vue.min.js'
     ]).pipe(gulp.dest(libs + 'vue/js'));
+});
+
+gulp.task('restore:simplemde', function () {
+    var js = gulp.src([
+        'node_modules/simplemde/dist/simplemde.min.js'
+    ]).pipe(gulp.dest(libs + 'simplemde/js'));
+
+    var css = gulp.src([
+        'node_modules/simplemde/dist/simplemde.min.css'
+    ]).pipe(gulp.dest(libs + 'simplemde/css'));
+
+    return merge(js, css);
 });
 
 
@@ -64,5 +83,7 @@ gulp.task('restore', gulp.series(
     'restore:lodash',
     'restore:moment',
     'restore:q',
-    'restore:vue'
+    'restore:requirejs',
+    'restore:vue',
+    'restore:simplemde'
 ));

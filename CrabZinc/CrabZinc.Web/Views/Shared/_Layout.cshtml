@@ -1,5 +1,5 @@
 ﻿@{
-    var title = "PyDeployer ";
+    var title = "Crab Zinc ";
     if (!string.IsNullOrEmpty(ViewData["Title"]?.ToString()))
     {
         title += ViewData["Title"];
@@ -16,8 +16,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--  scripts -->
     <script type="text/javascript" src="@rootPathPrefix/lib/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="@rootPathPrefix/lib/vue/js/vue.js"></script>
+    <script type="text/javascript" src="@rootPathPrefix/lib/require/js/require.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="@rootPathPrefix/lib/bulma/css/bulma.css" />
+    <script type="text/javascript" src="@rootPathPrefix/lib/simplemde/css/simplemde.min.css"></script>
 
     <title>@title</title>
 </head>
@@ -38,9 +41,6 @@
             @Html.Partial("_Footer")
         </footer>
     </div>
-
-    <!-- Load the Navigation bar-->
-    <script src="@rootPathPrefix/views/navigation.js" type="text/javascript"></script>
 </body>
 </html>
 
