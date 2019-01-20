@@ -20,8 +20,7 @@
             }
         },
         watch: {
-            value: function (newValue, oldValue) {
-                //console.log("Valued changed to: " + newValue);
+            value: function (newValue, oldValue) {       
                 if (this.simplemde.value() != newValue) {
                     this.setEditorValue(newValue);
                 }                
