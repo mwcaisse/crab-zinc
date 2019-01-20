@@ -1,0 +1,11 @@
+﻿@model CrabZinc.Common.ViewModels.RenderedPostViewModel
+@{
+    ViewData["Title"] = @Model.Title;
+}
+
+<h2 class="title">@Model.Title</h2>
+
+<div class="content">
+    @Html.Raw(@Model.RenderedContent)
+</div>
+

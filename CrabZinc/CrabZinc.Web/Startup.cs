@@ -9,6 +9,7 @@ using CrabZinc.Data;
 using CrabZinc.Logic.Services;
 using CrabZinc.Web.Configuration;
 using CrabZinc.Web.Converters;
+using CrabZinc.Web.Util;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -51,6 +52,8 @@ namespace CrabZinc.Web
             services.AddSingleton(applicationConfig);
 
             services.AddTransient<PostService>();
+
+            services.AddSingleton<MarkdownRenderer>();
 
             var entityMapperConfig = new MapperConfiguration(config =>
             {

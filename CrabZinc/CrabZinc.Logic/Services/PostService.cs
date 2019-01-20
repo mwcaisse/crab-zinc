@@ -26,6 +26,11 @@ namespace CrabZinc.Logic.Services
             return _db.Posts.Active().FirstOrDefault(p => p.PostId == id);
         }
 
+        public Post GetBySlug(string slug)
+        {
+            return _db.Posts.Active().FirstOrDefault(p => p.Slug == slug);
+        }
+
         public IEnumerable<Post> GetAll()
         {
             return _db.Posts.Active();
