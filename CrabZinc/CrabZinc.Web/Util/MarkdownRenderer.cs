@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Markdig;
+using Markdig.SyntaxHighlighting;
 
 namespace CrabZinc.Web.Util
 {
@@ -13,7 +14,10 @@ namespace CrabZinc.Web.Util
 
         public MarkdownRenderer()
         {
-            this._pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+            this._pipeline = new MarkdownPipelineBuilder()
+                .UseAdvancedExtensions()
+                .UseSyntaxHighlighting()
+                .Build();
         }
 
         public string ToHtml(string markdown)

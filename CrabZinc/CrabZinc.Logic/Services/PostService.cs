@@ -43,7 +43,7 @@ namespace CrabZinc.Logic.Services
                 PostUuid = Guid.NewGuid(),
                 Slug = ConvertTitleToSlug(toCreate.Title),
                 Title = toCreate.Title,
-                Content = toCreate.Content,
+                Content = ProcessContent(toCreate.Content),
                 Active = true
             };
 
@@ -63,7 +63,7 @@ namespace CrabZinc.Logic.Services
                 post.Slug = ConvertTitleToSlug(toUpdate.Title);
             }
 
-            post.Content = toUpdate.Content;
+            post.Content = ProcessContent(toUpdate.Content);
 
             _db.SaveChanges();
 
@@ -101,6 +101,17 @@ namespace CrabZinc.Logic.Services
             title = Regex.Replace(title, @"\s+", " ");
             title = title.Substring(0, title.Length <= 250 ? title.Length : 250).Trim();
             return Regex.Replace(title, @"\s", "-");
+        }
+
+        protected string ProcessContent(string content)
+        {
+            return TabsToSpaces(content);
+        }
+
+        protected string TabsToSpaces(string content)
+        {
+            //Replace all tabs with 4 spaces
+            return Regex.Replace(content, @"\t", "    ");
         }
 
     }
