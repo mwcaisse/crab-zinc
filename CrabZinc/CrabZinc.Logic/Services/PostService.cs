@@ -96,7 +96,7 @@ namespace CrabZinc.Logic.Services
         {
             title = title.ToLower();
             //Remove any invalid characters
-            title = Regex.Replace(title, @"[^a-z0-9/s-]", "");
+            title = Regex.Replace(title, @"[^a-z0-9\s-]", "");
             //Convert multiple spaces into one
             title = Regex.Replace(title, @"\s+", " ");
             title = title.Substring(0, title.Length <= 250 ? title.Length : 250).Trim();

@@ -2,6 +2,12 @@
     <textarea ref="editor"></textarea>
 </template>
 
+<style>
+    .CodeMirror {
+        height: 750px;
+    }
+</style>
+
 <script>
     import SimpleMDE from "simplemde";
     import 'simplemde/dist/simplemde.min.css';
