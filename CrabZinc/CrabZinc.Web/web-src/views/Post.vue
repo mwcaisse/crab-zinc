@@ -10,6 +10,12 @@
                     </div>
                 </div>
                 <div class="field">
+                    <label class="label">Description</label>
+                    <div class="control">
+                        <textarea class="textarea has-fixed-size" rows="3" placeholder="Brief description of what this post is about" v-model="description"></textarea>
+                    </div>
+                </div>
+                <div class="field">
                     <label class="label">Content</label>
                     <div class="control">
                         <app-markdown-editor v-model="content"></app-markdown-editor>
@@ -22,7 +28,7 @@
 </template>
 
 <script>
-    import system from "services/system.js"
+    import system from "services/System.js"
     import { PostService } from "services/ApplicationProxy.js";
     import Icon from "components/Common/Icon.vue"
     import MarkdownEditor from "components/Common/MarkdownEditor.vue"
@@ -36,6 +42,7 @@
                 postUuid: "",
                 slug: "",
                 title: "",
+                description: "",
                 content: "",
                 publishedDate: new Date(),
                 visible: true                
@@ -55,7 +62,8 @@
                 this.postUuid = post.postUuid;
                 this.content = post.content;
                 this.slug = post.slug;
-                this.title = post.title;                
+                this.title = post.title;   
+                this.description = post.description;
                 this.publishedDate = new Date(post.publishedDate)
                 this.visible = post.visible;
            
@@ -65,6 +73,7 @@
                 this.postUuid = "";
                 this.slug = "";
                 this.title = "";
+                this.description = "";
                 this.publishedDate = new Date()
                 this.visible = "";
             },
@@ -72,6 +81,7 @@
                 return {
                     postId: this.postId,
                     title: this.title,
+                    description: this.description,
                     content: this.content
                 }  
             },

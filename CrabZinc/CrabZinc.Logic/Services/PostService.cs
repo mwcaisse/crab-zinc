@@ -43,6 +43,7 @@ namespace CrabZinc.Logic.Services
                 PostUuid = Guid.NewGuid(),
                 Slug = ConvertTitleToSlug(toCreate.Title),
                 Title = toCreate.Title,
+                Description = toCreate.Description,
                 Content = ProcessContent(toCreate.Content),
                 Active = true
             };
@@ -63,6 +64,7 @@ namespace CrabZinc.Logic.Services
                 post.Slug = ConvertTitleToSlug(toUpdate.Title);
             }
 
+            post.Description = toUpdate.Description;
             post.Content = ProcessContent(toUpdate.Content);
 
             _db.SaveChanges();

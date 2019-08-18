@@ -34,6 +34,10 @@ namespace CrabZinc.Data.Mappings
                 .IsRequired()
                 .HasMaxLength(500);
 
+            builder.Property(p => p.Description)
+                .HasColumnName("DESCRIPTION")
+                .HasMaxLength(4000);
+            
             builder.Property(p => p.Content)
                 .HasColumnName("CONTENT")
                 .IsRequired();
