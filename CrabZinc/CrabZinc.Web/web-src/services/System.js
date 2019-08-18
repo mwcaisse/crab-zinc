@@ -1,10 +1,9 @@
-﻿import Vue from "vue"
-import VueConfig from "services/VueCommon.js"
+﻿import VueConfig from "services/VueCommon.js"
 import "services/CustomDirectives.js"
 
 class System {
-    constructor() {
-        this._baesUrl = ($("#rootPathPrefix").val() || "/") + "api/";
+    constructor() {        
+        this._baseUrl = ($("#rootPathPrefix").val() || "/");
         this._events = new Vue();
 
         VueConfig();

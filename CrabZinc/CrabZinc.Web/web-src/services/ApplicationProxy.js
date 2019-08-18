@@ -7,6 +7,9 @@ var post = {
     getAll: function() {
         return Proxy.get("post/");
     },
+    getNewest: function () {
+        return Proxy.get("post/newest");
+    },
     create: function(post) {
         return Proxy.post("post/", post);
     },

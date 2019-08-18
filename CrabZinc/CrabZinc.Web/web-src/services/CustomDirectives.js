@@ -1,5 +1,4 @@
-﻿import Vue from "vue"
-import Moment from "moment"
+﻿import Moment from "moment"
 
 import Util from "services/Util.js"
 
@@ -10,6 +9,7 @@ function formatDateFilter(value, formatString) {
     if (typeof value.format !== "function") {
         value = Moment(value);
     }
+    console.log("format date filter be called yo");
     return Util.formatDateTime(value, formatString);
 }
 

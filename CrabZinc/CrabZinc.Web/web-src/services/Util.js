@@ -19,7 +19,7 @@ function isStringNullOrBlank(string) {
 function formatDateTime(date, formatString) {
     if (typeof formatString === "undefined") {
         formatString = "YYYY-MM-DD HH:mm:ss";
-    }
+    }    
     if (date && date.isValid()) {
         return date.format(formatString);
     }

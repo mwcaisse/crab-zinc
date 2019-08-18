@@ -8,7 +8,7 @@
 <div id="@Model.VmElementId"></div>
 <script type="text/javascript" src="@viewUrl"></script>
 <script type="text/javascript">
-    require(['@Model.ViewName'], function (vm) {
+    require(['@Model.ViewName'], function (vm) {   
         new Vue({
             el: "#@Model.VmElementId",
             render: h => h(vm.default)

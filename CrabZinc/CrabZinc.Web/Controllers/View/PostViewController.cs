@@ -10,13 +10,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace CrabZinc.Web.Controllers.View
 {
     [Route("post/")]
-    public class PostController : Controller
+    public class PostViewController : Controller
     {
 
         private readonly PostService _postService;
         private readonly MarkdownRenderer _markdownRenderer;
 
-        public PostController(PostService postService, MarkdownRenderer markdownRenderer)
+        public PostViewController(PostService postService, MarkdownRenderer markdownRenderer)
         {
             this._postService = postService;
             this._markdownRenderer = markdownRenderer;

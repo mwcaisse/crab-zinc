@@ -18,7 +18,7 @@ namespace CrabZinc.Web.Controllers.View
         [Route("{postId:long?}")]
         public IActionResult Index(long postId = -1)
         {
-            return VueView("views/Post", "Admin -- Post", new VueViewProperty()
+            return VueView("views/Admin/Post", "Admin -- Post", new VueViewProperty()
             {
                 Name = "postId",
                 Value = Convert.ToString(postId)
