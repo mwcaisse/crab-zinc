@@ -3,7 +3,7 @@ import "services/CustomDirectives.js"
 
 class System {
     constructor() {        
-        this._baseUrl = ($("#rootPathPrefix").val() || "/");
+        this._baseUrl = ($("#rootPathPrefix").val() || "") + "/";
         this._events = new Vue();
 
         VueConfig();
