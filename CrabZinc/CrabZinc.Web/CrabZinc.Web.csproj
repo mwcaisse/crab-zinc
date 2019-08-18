@@ -28,4 +28,19 @@
     <ProjectReference Include="..\CrabZinc.Logic\CrabZinc.Logic.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="dbConfig.json.ptd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="deploymentConfig.json.ptd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="deploymentConfig.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
