@@ -36,6 +36,18 @@ namespace CrabZinc.Logic.Services
             return _db.Posts.Active();
         }
 
+        /// <summary>
+        /// Get the <paramref name="amount" /> newest posts sorted with the newest posts appearing first
+        /// </summary>
+        /// <param name="amount">The number of posts to take, defaults to 10</param>
+        /// <returns><paramref name="amount" /> newest posts</returns>
+        public IEnumerable<Post> GetNewest(int amount=10)
+        {
+            //TODO: This should really be published date, but publish functionality isn't implemented yet, so
+            //    we are going to go with Created date
+            return _db.Posts.Active().OrderByDescending(p => p.CreateDate).Take(amount);
+        }
+
         public Post Create(PostViewModel toCreate)
         {
             var post = new Post()

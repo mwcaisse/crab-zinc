@@ -34,6 +34,13 @@ namespace CrabZinc.Web.Controllers.Api
             return Ok(_postService.GetAll());
         }
 
+        [HttpGet]
+        [Route("newest")]
+        public IActionResult GetNewest()
+        {
+            return Ok(_postService.GetNewest());
+        }
+
         [HttpPost]
         [Route("")]
         public IActionResult Create([FromBody] PostViewModel post)
