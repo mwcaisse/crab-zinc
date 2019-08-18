@@ -1,0 +1,14 @@
+name: CrabZinc
+uuid: 6207350f-04d3-4765-a0cc-12d62c4a3c10
+subProjects:
+  - name: CrabZinc.Web
+    type: web
+    packageManager: yarn
+    webpack: true
+    serviceName: crabzinc
+  - name: CrabZinc.Database
+    type: database
+    scriptDirectory: VersionedScripts
+    versionPrefix: V
+    versionSeparator: _
+    
