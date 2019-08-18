@@ -45,9 +45,11 @@ namespace CrabZinc.Web
                 options.UseMySql(Configuration.GetSection("connectionString").Value)
             );
 
+            var rootPathPrefix = Configuration.GetValue<string>("rootPathPrefix", "");
+            
             var applicationConfig = new ApplicationConfiguration()
             {
-                RootPathPrefix = ""
+                RootPathPrefix = rootPathPrefix
             };
             services.AddSingleton(applicationConfig);
 
