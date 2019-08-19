@@ -1,5 +1,5 @@
 ﻿<template>
-    <div>
+    <div class="container">
         <div class="section">
             <div class="container">
                 <h1 class="title">Post!</h1>

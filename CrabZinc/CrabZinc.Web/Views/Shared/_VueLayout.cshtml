@@ -24,7 +24,7 @@
 
     <title>@title</title>
 </head>
-<body>
+<body class="has-navbar-fixed-top">
     <input id="rootPathPrefix" type="hidden" value="@rootPathPrefix" />
     <input id="isAuthenticated" type="hidden" value="@isAuthenticated" />
 
@@ -45,7 +45,7 @@
         </div>
 
         <!-- the body of the page -->
-        <div class="container">
+        <div>
             @RenderBody()
         </div>
 
