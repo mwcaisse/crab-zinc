@@ -2,9 +2,9 @@
     <div>
         <ul>
             <li class="box" v-for="post in posts">
-                <p class="is-size-5">{{ post.createDate | formatDate("MMMM DD, YYYY") }}</p>
+                <p class="is-size-6">{{ post.createDate | formatDate("MMMM DD, YYYY") }}</p>
                 <p class="is-size-3"><a :href="`${baseUrl}post/${post.slug}/`">{{ post.title }}</a></p>
-                <p class="is-size-4">{{ post.description }}</p>
+                <p class="is-size-5">{{ post.description }}</p>
             </li>
         </ul>
     </div>
