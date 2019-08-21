@@ -29,20 +29,7 @@
     <input id="isAuthenticated" type="hidden" value="@isAuthenticated" />
 
     <div>
-        <div id="navigation">
-            <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-                <div class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item" href="https://mwcaisse.com/">
-                            Home
-                        </a>
-                        <a class="navbar-item" href="@rootPathPrefix/">
-                            Blog
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
+        @Html.Partial("_Navigation")
 
         <!-- the body of the page -->
         <div>

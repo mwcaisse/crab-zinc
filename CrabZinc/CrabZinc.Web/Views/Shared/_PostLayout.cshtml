@@ -22,6 +22,8 @@
     <input id="rootPathPrefix" type="hidden" value="@rootPathPrefix" />
 
     <div>
+        @Html.Partial("_Navigation")
+        
         <!-- the body of the page -->
         <div class="container">
             @RenderBody()
